@@ -8,7 +8,7 @@ import { indexToType, Signer } from "./signing/index";
 import { getSignatureData } from "./ar-data-base";
 import axios, { AxiosResponse } from "axios";
 import { SIG_CONFIG, SignatureConfig } from "./constants";
-import * as crypto from "crypto-browserify";
+import * as crypto from "crypto";
 
 export const MIN_BINARY_SIZE = 80;
 
