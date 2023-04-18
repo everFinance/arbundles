@@ -1,6 +1,6 @@
 {
   "name": "arseeding-arbundles",
-  "version": "0.6.24",
+  "version": "0.6.25",
   "description": "Arweave bundling library",
   "author": "Josh Benaron <joshbenaron@gmail.com>",
   "license": "Apache-2.0",
@@ -65,7 +65,7 @@
     "ethers": "^5.5.1",
     "keccak": "^3.0.2",
     "multistream": "^4.1.0",
-    "noble-ed25519": "^1.2.6",
+    "@noble/ed25519": "^1.6.1",
     "process": "^0.11.10",
     "secp256k1": "^4.0.2",
     "tmp-promise": "^3.0.2",
