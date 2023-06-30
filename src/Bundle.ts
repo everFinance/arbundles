@@ -5,7 +5,7 @@ import Transaction from "arweave/node/lib/transaction";
 import Arweave from "arweave";
 import { BundleInterface } from "./BundleInterface";
 import { JWKInterface } from "./interface-jwk";
-import { createHash } from "crypto-browserify";
+import { createHash } from "crypto";
 import { CreateTransactionInterface } from "arweave/node/common";
 
 const HEADER_START = 32;
