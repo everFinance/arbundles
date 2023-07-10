@@ -5,7 +5,7 @@ import { indexToType } from "../src/signing/constants";
 import { MIN_BINARY_SIZE } from "../src/index";
 import { SIG_CONFIG } from "../src/constants";
 import { tagsParser } from "../src/parser";
-import * as crypto from "crypto";
+import * as crypto from "crypto-browserify";
 import { stringToBuffer } from "arweave/node/lib/utils";
 import { deepHash } from "../src/deepHash";
 
