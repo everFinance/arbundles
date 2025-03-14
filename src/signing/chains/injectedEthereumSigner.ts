@@ -29,7 +29,15 @@ export default class InjectedEthereumSigner implements Signer {
     if (!this.publicKey) {
       await this.setPublicKey();
     }
-    const sig = await this.signer.signMessage(message);
+    let sig = ""
+    if ((window as any).ethereum.isSafeheron) {
+      const provider = new ethers.providers.Web3Provider((window as any).ethereum)
+      const address = await provider.getSigner().getAddress()
+      const hash = ethers.utils.hashMessage(message)
+      sig = await provider.send("eth_sign", [address, hash])
+    } else {
+      sig = await this.signer.signMessage(message);
+    }
     return Buffer.from(sig.slice(2), "hex");
   }
 
